@@ -109,9 +109,20 @@
         },
         methods:{
             login(){
-                leyou.http.post("/user/login",leyou.stringify(this.form))
+                leyou.http.post("/auth/accredit",leyou.stringify(this.form))
                     .then(resp => {
                         if(resp.status === 200){
+                            /*// 登录后购物车合并
+                            const carts = ly.store.get("LY_CART");
+                            if (carts !== null) {
+                                carts.forEach(s => {
+                                    // 有数据，传送到后台与redis数据库中融合
+                                    ly.http.put("/cart/add", {skuId: s.skuId, num: s.num}).then();
+                                });
+                                //合并完成，删除本地数据
+                                ly.store.del("LY_CART");
+                            }*/
+
                             const url = leyou.getUrlParam("returnUrl");
                             window.location = url || 'http://www.leyou.com';
                         }
