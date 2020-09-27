@@ -17,7 +17,7 @@ eureka:
     lease-expiration-duration-in-seconds: 10 # 10秒不发送就过期
 leyou:
   sms:
-    accessKeyId: LTAI4G1q4WYLAV1qy8vEUJTt # 你自己的accessKeyId
-    accessKeySecret: xw4MlU2aDxILszu9uAFtXJPGwyAWCq # 你自己的AccessKeySecret
+    accessKeyId:  # 你自己的accessKeyId
+    accessKeySecret:  # 你自己的AccessKeySecret
     signName: 乐优商城 # 签名名称
     verifyCodeTemplate: SMS_199806605 # 模板名称
